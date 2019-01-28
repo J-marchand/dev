@@ -1,0 +1,42 @@
+<form class="generic-form" action="add_post.php" method="POST">
+    <fieldset>
+        <legend>Nouvel Article</legend>
+        <ul>
+            <li>
+                <label for="title">Titre :</label>
+                <input type="text" id="title" name="title">
+            </li>
+            <li>
+                <label class="textarea" for="contents">Article :</label>
+                <textarea id="contents" name="contents" rows="15"></textarea>
+            </li>
+            <li>
+                <label for="author">Auteur :</label>
+                <select id="author" name="author">
+                
+                    <?php foreach ($author as $authors): ?>
+                    <option value="<?= $authors['Id'] ?>">
+                        <?= $authors['FirstName'] ?>
+                        <?= $authors['LastName'] ?>
+                    </option>
+                    <?php endforeach ?>
+                </select>
+            </li>
+            <li>
+                <label for="category">Catégorie :</label>
+                <select id="category" name="category">
+                
+                    <?php foreach ($category as $categories): ?>
+                    <option value="<?= $categories['Id'] ?>">
+                        <?= $categories['Name'] ?>
+                    </option>
+                    <?php endforeach ?>             
+                </select>
+            </li>
+            <li>
+                <button class="button button-primary" type="submit">Enregistrer</button>
+                <a class="button button-cancel" href="index.php">Annuler</a>
+            </li>
+        </ul>
+    </fieldset>
+</form>

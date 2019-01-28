@@ -1,0 +1,22 @@
+<form class="generic-form" action="remove.php" method="post">
+
+
+    <fieldset>
+        <legend><i class="fa fa-sticky-note-o"></i> Article</legend>
+        <ul>
+            <input type="hidden" name="postId" value="<?=$_GET['Id']?>">
+            <li>
+                <label for="title">Titre :</label>
+                <input type="text" id="title" name="title" value="<?= htmlspecialchars($modifDetail['Title']) ?>">
+            </li>
+            <li>
+                <label class="textarea" for="contents">Article :</label>
+                <textarea id="contents" name="contents" rows="15"><?= htmlspecialchars($modifDetail['Content']) ?></textarea>
+            </li>
+            <li>
+                <button class="button button-primary" type="submit">Mettre à jour</button>
+                <a class="button button-cancel" href="index.php">Annuler</a>
+            </li>
+        </ul>
+    </fieldset>
+</form>

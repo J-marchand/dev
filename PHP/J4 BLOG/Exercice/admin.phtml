@@ -1,0 +1,126 @@
+<h1><a href="add_post.php">rediger article</a></h1>
+
+<table>
+    <h2>Liste des articles</h2>
+    <thead>
+        <tr>
+            <th class="column">Titre</th>
+            <th class="large_column">Article</th>
+            <th class="column">Auteur</th>
+            <th class="column">Catégorie</th>
+            <th class="column"></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <?php foreach ($postAll as $postAlls): ?>
+        <tr>
+            <td><a href="show_post.php?Id=<?= $postAlls['Id'] ?>"><?= $postAlls['Title']?></a></td>
+            <td><?= substr($postAlls['Content'], 0, 100)?>...</td>
+            <td>
+                <?= $postAlls['FirstName'] ?>
+                <?= $postAlls['LastName'] ?>
+            </td>
+            <td><?= $postAlls['Name'] ?></td>
+            <td>
+                <a href="edit_post.php?Id=<?= $postAlls['Id'] ?>"><i class="fas fa-pen"></i></a>
+                <a href="delete.php?Id=<?= $postAlls['Id']?>"><i class="fas fa-times"></i></a>                
+            </td>
+        </tr>   
+        <?php endforeach ?>
+    </tbody>
+</table>
+
+<hr>
+
+<h2>Panneau de configuration</h2>
+<div class="panneau">    
+    <div class="panneau_add-category">
+
+        <h3>Mes catégories</h3>
+        <table>
+            <thead>
+                <h4>Categorie</h4>
+            </thead>
+            <tbody>
+            <?php foreach ($categoryDetail as $categoryDetails): ?>
+                <tr>
+                    <td style="list-style: none;">
+                        <p><?= $categoryDetails['Name'] ?></p>                     
+                    </td>
+                    <td>
+                        <a href="delete-category.php?Id=<?= $categoryDetails['Id']?>"><i class="fas fa-times"></i></a>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+            </tbody>
+        </table>
+
+        <form action="admin.php" method="POST">
+            <label for="category">Ajouter une categorie :</label>
+            <input type="text" name="add-category">
+            <input type="submit" value="Ajouter">
+        </form>
+
+    </div>
+
+    <div class="panneau_add-author">
+
+        <h3>Utilisateurs</h3>
+        <table>
+            <thead>
+                <tr>
+                    <td><h4>Mail</h4></td>
+                    <td><h4>Nom</h4></td>
+                    <td><h4>Prenom</h4></td>
+                    <td><h4>Pseudo</h4></td>
+                    <td><h4>Role</h4></td>
+                    <td><h4>Modifier</h4></td>
+                    <td><h4>Supprimer</h4></td>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+                <?php foreach ($userDetail as $userDetails): ?>
+                    <tr>
+                        <td><?= $userDetails['mail'] ?></td>
+                        <td><?= $userDetails['lastName'] ?></td>
+                        <td><?= $userDetails['firstName'] ?></td>
+                        <td><?= $userDetails['nickName'] ?></td>
+                        
+                            <form action="change_role.php" method="POST">
+                            <input type="hidden" name="roleId" value="<?= $userDetails['id'] ?>">
+                                <td>
+                                    <select name="role_select" id="role_select">
+                                        <option value="admin"><?= $userDetails['role'] ?></option>
+
+                                        <?php if ($userDetails['role'] == "admin"): ?>
+                                        <option value="user">user</option>
+                                        <?php endif ?>
+
+                                        <?php if ($userDetails['role'] == "user" ): ?>
+                                        <option value="admin">admin</option>
+                                        <?php endif ?>
+                                    </select>                            
+                                </td>
+                                <td>
+                                    <button><a href=""><i class="fas fa-pen"></i></a></button>
+                                </td>
+                                <td>
+                                    <a href="delete_user.php?id=<?= $userDetails['id'] ?>"><i class="fas fa-times"></i></a>
+                                </td>
+                            </form>
+                       
+                    </tr>
+                <?php endforeach ?>    
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+

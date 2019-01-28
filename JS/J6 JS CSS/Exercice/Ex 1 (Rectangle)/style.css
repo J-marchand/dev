@@ -1,0 +1,36 @@
+/* HEADER */
+
+header h1
+{
+    text-align: center;
+    font-size: 2em
+}
+
+header button
+{
+    margin: 20px 0;
+}
+
+/* MAIN */
+
+.rectangle
+{    
+    background-color: royalblue;
+    width: 400px;
+    height: 300px;
+}
+
+.good
+{
+    background-color: lime;
+}
+
+.important
+{
+    background-color: firebrick;
+}
+
+.hidde 
+{
+    display: none;
+}

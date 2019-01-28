@@ -1,0 +1,47 @@
+.header
+{
+    width: 100%;
+    min-height: 100px;
+    background-color: black;
+}
+
+.header_nav_ul
+{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.header_nav_ul a
+{
+    text-decoration: none;
+    color: black;
+
+    background-color: white;
+
+    padding: 10px;
+}
+
+body
+{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.main_form,
+.login_form,
+.forgot_form
+{
+    width: 50%;
+    margin: 100px auto 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.main_form input,
+.login_form input,
+.forgot_form input
+{
+    margin-bottom: 20px;
+}

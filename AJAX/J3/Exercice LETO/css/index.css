@@ -1,0 +1,57 @@
+/* title */
+body
+{
+    margin: 0;
+}
+
+
+.title,
+.bloc_info,
+.bloc_video
+
+{
+    width: 50%;
+    margin: 0 Auto;   
+}
+
+.bloc_info
+{
+    background-color: rgb(200, 195, 195);
+    display: flex;
+
+}
+.bloc_info-img
+{
+    width: 25%;
+}
+.bloc_info-img img
+{
+    width: 100%;
+    position: relative;
+    bottom: 25px;
+    right: 25px;
+}
+.bloc_info-detail
+{
+    width: 70%;
+}
+.bloc_info-detail div
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#synopsis h2
+{
+    width: 100%;
+}
+
+
+/* TIME */
+
+.title_h1
+{
+    text-align: center;
+    font-size: 5em;
+}

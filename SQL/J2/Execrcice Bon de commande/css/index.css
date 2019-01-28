@@ -1,0 +1,67 @@
+body
+{
+    background-color: #F8FFF2;
+}
+
+.container
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear
+{
+    clear: both;
+}
+
+/*** HEADER ***/
+
+header h1
+{
+    padding: 10px 0;
+    color: #00948A;
+}
+
+/*** MAIN ***/
+table
+{
+    width: 100%;
+    border:  1px solid black;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th
+{
+    text-align: left;
+    padding: 20px;
+}
+
+table td
+{
+    padding: 5px 20px;
+}
+
+table tr:nth-child(even)
+{
+    background-color: gray;
+}
+
+table tr:nth-child(odd)
+{
+    background-color: rgb(195, 195, 195);
+}
+
+
+/*** ORDER PAGE ***/
+/*** MAIN ***/
+
+.customer
+{
+    float: right;
+    text-align: right;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/*** TABLE ***/

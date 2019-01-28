@@ -1,0 +1,45 @@
+body
+{
+    box-sizing: border-box;
+}
+header h1
+{
+    text-align: center;
+}
+
+/* MAIN */
+
+main
+{
+    width: 800px;
+    margin: 0 Auto;
+}
+
+ul li
+{
+    list-style: none;
+}
+
+ul img
+{
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 20px;
+}
+
+ul
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+li:hover
+{
+    background-color: silver;
+    border-radius: 50px;
+}
+
+.green
+{
+    background-color: green !important;
+    border-radius: 50px;
+}

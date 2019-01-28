@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>api</title>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+    <h1 style="text-transform:uppercase; font-size: 100px; text-align: center;">moteur de recherche de film</h1>
+    <form style="width: 300px; margin: 0 auto;">
+        <label for="site-search">Rechercher un film:</label>
+        <input type="search" id="film-search" name="input-search">
+
+        <button id="search">Rechercher</button>
+    </form>
+
+    <div style="display: flex; justify-content: space-around; align-items: center; width: 80%; margin: 0 auto;">
+        <div id="here" style="min-width: 30%; margin: 20px;"></div>
+
+        <div style="text-align: center;">
+            <div id="here2" style="max-width: 50%;min-width: 50%; margin: 20px;"></div>
+            <div id="here3" style="max-width: 50%; min-width: 50%; margin: 20px;"></div>
+            <div id="here4" style="max-width: 50%; min-width: 50%; margin: 20px;"></div>
+        </div>
+
+        <p id="more">More</p>
+
+        <div id="here5"></div>
+    </div>
+</body>
+
+
+<script type="text/javascript" src="JS/ajax.js"></script>
+<script type="text/javascript" src="JS/event.js"></script>
+<script type="text/javascript" src="JS/main.js"></script>
+
+</html>

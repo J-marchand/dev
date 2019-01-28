@@ -1,0 +1,22 @@
+table
+{
+    border: 1px solid black;
+    padding: 2px;
+}
+
+table tr, td 
+{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    width: 20px;
+    margin: auto;
+}
+
+.color {
+    color: black;
+    background-color: white;
+}
+

@@ -1,0 +1,26 @@
+<h2><i class="fa fa-home"></i> Accueil</h2>
+
+<?php if(array_key_exists('firstName', $_SESSION)): ?>
+
+<h3>Vous etes connecté bienvenue <?= $_SESSION['pseudo'] ?></h3>
+
+<?php endif ?>
+
+
+<?php foreach ($allDetail as $allDetails): ?>
+    
+
+    <h2><a href="show_post.php?Id=<?= $allDetails['Id']?>">
+        <?= htmlspecialchars($allDetails['Title']) ?>
+    </a></h2>
+    <p>
+        <?= htmlspecialchars(substr($allDetails['Content'], 0, 200)) ?>...
+    </p>
+    <p>Rédigé par
+        <?= $allDetails['FirstName'] ?>
+        <?= $allDetails['LastName'] ?>
+        le 
+        <?= $allDetails['CreationDate'] ?>
+    </p>
+
+<?php endforeach ?>

@@ -1,0 +1,53 @@
+body
+{
+    background-image: url(../img/map.jpg);
+    background-size: cover;
+}
+#affichage
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.droite,
+.gauche
+{
+    width: 30%;
+}
+
+#commande
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 550px;
+
+}
+
+#commande button
+{
+    width: 25%;
+    padding: 20px;
+}
+
+.zelda
+{
+    position: relative;
+    left: 360px;
+    top: 315px;
+    width: 259px;
+}
+
+.falcon
+{
+    position: relative;
+    right: 56px;
+    top: 350px;
+    width: 242px;
+}
+
+#victory
+{
+    text-align: center;
+    position: relative;
+    font-size: 10em;
+}

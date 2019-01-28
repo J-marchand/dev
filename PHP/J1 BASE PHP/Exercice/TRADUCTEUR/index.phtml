@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<header>
+
+    <h1>traducteur francais - anglais</h1>
+
+</header>
+
+<main>
+
+    <form action="index.php" method="POST">
+
+        <p>Mot</p><input type="text" name="translate"><br>
+
+        <input type="submit" value="Traduire">
+
+        <select name="language">
+            <option value="inEnglish">Francais vers Anaglais</option>
+            <option value="inFrench">Anglais vers Francais</option>
+        </select>
+
+    </form>
+    <?php if($result != "mot inconnu") {?>
+        <p>La traduction du mot  est <?= $result ?></p>
+    <?php } else {?>
+        <p>Désolé je ne connais pas le mot : <?=$translate?></p>
+    <?php } ?>
+
+</main>
+
+    
+</body>
+</html>
