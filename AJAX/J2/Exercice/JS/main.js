@@ -10,7 +10,7 @@ function onClickExecute(event) {
 }
 
 
-$('#search').on('click', onClickExecute);
+    $('#search').on('click', onClickExecute);
 
 function viewDetail()
 {
