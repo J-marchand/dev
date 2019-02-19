@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon MVC</h1>
+    </header>
+
+    <nav>
+        <a href="<?= $requestUrl ?>">Acceuil</a>
+        <a href="<?= $requestUrl ?>?page=register">Register</a>
+        <a href="<?= $requestUrl ?>?page=login">Login</a>
+
+        <?php if($_SESSION == true): ?>
+            <a href="">Deconnexion</a>
+        <?php endif ?>
+    </nav>
+
+    <main>
+            
+        <?php include $page.'View.phtml'; ?>
+        
+    </main>
+
+    <footer>
+        <h1>Je suis la footer</h1>
+    </footer>
+</body>
+</html>
